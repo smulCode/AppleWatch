@@ -3,39 +3,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
 
 *{
-    // box-sizing: border-box;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-html {
+body {
     background: #1e1e1e;
     background-size: cover;
     font-family: 'Source Sans Pro', sans-serif;
     // font-family: 'Poppins', sans-serif;
     text-align: center;
     font-size: 10px;
+  
   }
 
-  body {
+ .main {
+   position: relative;
     margin: 0;
     font-size: 2rem;
-    display: flex;
-    flex: 1;
     min-height: 100vh;
     align-items: center;
   }
 
   .clock {
-    width: 30rem;
-    height: 30rem;
-    border: 20px solid white;
-    border-radius: 50%;
-    margin: 50px auto;
-    position: relative;
-    padding: 2rem;
-    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef,
-      inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index:99;
+    width: 32rem;
+    height: 35rem;
+    //  border: 2px solid white;
+    border-radius:50%;
+    position: absolute;
+    padding:  1rem;
+  
+    // box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef,
+    //   inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
   
 
   &::after {
@@ -53,6 +59,10 @@ html {
   }
 }
 
+.clock.active{
+  display:none;
+}
+
   .clock-face {
     position: relative;
     width: 100%;
@@ -65,14 +75,14 @@ html {
 
   .hand {
     width: 50%;
-    height: 5px;
+    height: 7px;
     background: transparent;
     position: absolute;
     top: 50%;
     transform-origin: 100%;
     transform: rotate(90deg);
     border-radius: 3rem;
-    outline: 2px solid #cecece;
+    outline: 3px solid #fff;
     z-index: 5;
 
   }
@@ -99,72 +109,71 @@ html {
    
   }
 
+  .min-hand{
+    transform-origin: 100%;
+    width: 40%;
+    left: 3rem;
+  }
+
   .second-hand{
     background: crimson;
     height: 2px;
     transition: all 0.05s;
     transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
     outline: none;
+    
 
    
   }
 
-.container-numbers{
-    top: -2rem;
-    left: 0;
-    z-index: -1;
-    position: absolute;
-    // border: 1px solid red;
-    display: grid; 
-    grid-auto-columns: 1fr; 
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 1fr 1fr 1fr; 
-    gap: 0px 3rem; 
-    grid-template-areas: 
-      ". number12 ."
-      "number9 . number3"
-      ". number6 ."; 
-  }
-  .number12 { grid-area: number12; }
-  .number9 { grid-area: number9; }
-  .number3 { grid-area: number3; }
-  .number6 { grid-area: number6; }
-  
+
   
   
   .number {
-  
+    position: absolute;
       width: 100%;
       height: 100%;
       text-align: center;
-    //   transform: rotate(0deg);
-      font-size: 5em;
+      transform: rotate(0deg);
+      font-size: 1.6em;
       color: #cecece;
       font-weight: 900;
-      -webkit-text-stroke: 1px #fefefe;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: #fff;
+    
+      border-radius:100%;
       
 
 
-    
-    
-
   }
 
-//   .number1 { transform: rotate(30deg); }
-//   .number2 { transform: rotate(60deg); }
-//   .number3 { transform: rotate(90deg); }
-//   .number4 { transform: rotate(120deg); }
-//   .number5 { transform: rotate(150deg); }
-//   .number6 { transform: rotate(180deg); }
-//   .number7 { transform: rotate(210deg); }
-//   .number8 { transform: rotate(240deg); }
-//   .number9 { transform: rotate(270deg); }
-//   .number10 { transform: rotate(300deg); }
-//   .number11 { transform: rotate(330deg); }
+  .number1 { transform: rotate(30deg); }
+  .number2 { transform: rotate(60deg); }
+  .number3 { transform: rotate(90deg); }
+  .number4 { transform: rotate(120deg); }
+  .number5 { transform: rotate(150deg); }
+  .number6 { transform: rotate(180deg); }
+  .number7 { transform: rotate(210deg); }
+  .number8 { transform: rotate(240deg); }
+  .number9 { transform: rotate(270deg); }
+  .number10 { transform: rotate(300deg); }
+  .number11 { transform: rotate(330deg); }
   
-////@at-root
+//
+.Size-lg{
+  font-size:1.6em
+}
+.Size-m{
+  font-size:1.2em
+}
+
+.fa-minus{
+  transform: rotate(90deg);
+  -webkit-text-stroke: 5px #fefefe;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: #fff;
+
+ 
+}
+
 
 .apple-watch {
     position: relative;
@@ -258,5 +267,38 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 60%;
-    border-radius: 2.5625em;
+    border-radius: 2.56em;
+  }
+
+  .clock-digital{
+    display: none;
+    position: relative;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #fefefe;
+    font-size: 10rem;
+    font-weight: 900;
+    letter-spacing: 7px;
+    z-index: 9999;
+  }
+
+  .clock-digital.active {
+    display: block;
+  }
+
+  .date-digital{
+    display: none;
+    position: relative;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #fefefe;
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+    z-index: 9999;
+  }
+  .date-digital.active {
+    display: block;
   }
