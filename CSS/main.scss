@@ -1,51 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background: #1e1e1e;
-    background-size: cover;
-    font-family: 'Source Sans Pro', sans-serif;
-    // font-family: 'Poppins', sans-serif;
-    text-align: center;
-    font-size: 10px;
-  
-  }
+  background: #1e1e1e;
+  background-size: cover;
+  // font-family: 'Poppins', sans-serif;
+  // font-family: 'Concert One', cursive;
+  font-family: "Montserrat", sans-serif;
+  // font-family: 'Source Sans Pro', sans-serif;
+  text-align: center;
+  font-size: 10px;
+}
 
- .main {
-   position: relative;
-    margin: 0;
-    font-size: 2rem;
-    min-height: 100vh;
-    align-items: center;
-  }
+.main {
+  position: relative;
+  margin: 0;
+  font-size: 2rem;
+  min-height: 100vh;
+  align-items: center;
+}
 
-  .clock {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index:99;
-    width: 32rem;
-    height: 35rem;
-    //  border: 2px solid white;
-    border-radius:50%;
-    position: absolute;
-    padding:  1rem;
-  
-    // box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef,
-    //   inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
-  
+.clock {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  width: 32rem;
+  height: 35rem;
+  //  border: 2px solid white;
+  border-radius: 50%;
+  position: absolute;
+  padding: 1rem;
+
+  // box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef,
+  //   inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     background-color: black;
     z-index: 1;
@@ -59,246 +62,247 @@ body {
   }
 }
 
-.clock.active{
-  display:none;
+.clock.active {
+  display: none;
 }
 
-  .clock-face {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transform: translateY(
-      -3px
-    );
-     /* account for the height of the clock hands */
-  }
+.clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-3px);
+  /* account for the height of the clock hands */
+}
 
-  .hand {
-    width: 50%;
-    height: 7px;
-    background: transparent;
-    position: absolute;
-    top: 50%;
-    transform-origin: 100%;
-    transform: rotate(90deg);
-    border-radius: 3rem;
-    outline: 3px solid #fff;
-    z-index: 5;
+.hand {
+  width: 50%;
+  height: 7px;
+  background: transparent;
+  position: absolute;
+  top: 50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  border-radius: 3rem;
+  outline: 3px solid #fff;
+  z-index: 5;
+}
 
-  }
+.hour-hand {
+  transform-origin: 100%;
+  width: 30%;
+  left: 6rem;
 
-  .hour-hand {
-    transform-origin: 100%;
-    width: 30%;
-    left: 6rem;
-   
-    // &:after{
-    //     content: '';
-    // position: absolute;
-    // background-color: white;
-    // z-index: 1;
-    // width: 50px;
-    // height: 10px;
-    // top: 50%;
-    // left: 30%;
-    // transform: translate(-50%, -50%);
+  // &:after{
+  //     content: '';
+  // position: absolute;
+  // background-color: white;
+  // z-index: 1;
+  // width: 50px;
+  // height: 10px;
+  // top: 50%;
+  // left: 30%;
+  // transform: translate(-50%, -50%);
 
-    
+  // }
+}
 
-    // }
-   
-  }
+.min-hand {
+  transform-origin: 100%;
+  width: 40%;
+  left: 3rem;
+}
 
-  .min-hand{
-    transform-origin: 100%;
-    width: 40%;
-    left: 3rem;
-  }
+.second-hand {
+  background: crimson;
+  height: 2px;
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+  outline: none;
+}
 
-  .second-hand{
-    background: crimson;
-    height: 2px;
-    transition: all 0.05s;
-    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
-    outline: none;
-    
+.number {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform: rotate(0deg);
+  font-size: 1.6em;
+  color: #cecece;
+  font-weight: 900;
 
-   
-  }
+  border-radius: 100%;
+}
 
+.number1 {
+  transform: rotate(30deg);
+}
+.number2 {
+  transform: rotate(60deg);
+}
+.number3 {
+  transform: rotate(90deg);
+}
+.number4 {
+  transform: rotate(120deg);
+}
+.number5 {
+  transform: rotate(150deg);
+}
+.number6 {
+  transform: rotate(180deg);
+}
+.number7 {
+  transform: rotate(210deg);
+}
+.number8 {
+  transform: rotate(240deg);
+}
+.number9 {
+  transform: rotate(270deg);
+}
+.number10 {
+  transform: rotate(300deg);
+}
+.number11 {
+  transform: rotate(330deg);
+}
 
-  
-  
-  .number {
-    position: absolute;
-      width: 100%;
-      height: 100%;
-      text-align: center;
-      transform: rotate(0deg);
-      font-size: 1.6em;
-      color: #cecece;
-      font-weight: 900;
-    
-      border-radius:100%;
-      
-
-
-  }
-
-  .number1 { transform: rotate(30deg); }
-  .number2 { transform: rotate(60deg); }
-  .number3 { transform: rotate(90deg); }
-  .number4 { transform: rotate(120deg); }
-  .number5 { transform: rotate(150deg); }
-  .number6 { transform: rotate(180deg); }
-  .number7 { transform: rotate(210deg); }
-  .number8 { transform: rotate(240deg); }
-  .number9 { transform: rotate(270deg); }
-  .number10 { transform: rotate(300deg); }
-  .number11 { transform: rotate(330deg); }
-  
 //
-.Size-lg{
-  font-size:1.6em
+.Size-lg {
+  font-size: 1.6em;
 }
-.Size-m{
-  font-size:1.2em
+.Size-m {
+  font-size: 1.2em;
 }
 
-.fa-minus{
+.fa-minus {
   transform: rotate(90deg);
   -webkit-text-stroke: 5px #fefefe;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: #fff;
-
- 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #fff;
 }
 
-
 .apple-watch {
-    position: relative;
-    width: 17.75em;
-    height: 20.5em;
-    margin: 2em auto;
-    color: #999;
-    background: currentColor;
-    background:
-    linear-gradient(
-      -72deg,
-      #dedede,
-      #ffffff 16%,
-      #dedede 21%,
-      #ffffff 24%,
-      #454545 27%,
-      #dedede 36%,
-      #ffffff 45%,
-      #ffffff 60%,
-      #dedede 72%,
-      #ffffff 80%,
-      #dedede 84%,
-      #a1a1a1
-    );
-    border-radius: 3.25em;
-    transform: translateZ(0);
-    transition: all 500ms;
-  }
-  .apple-watch:before,
-  .apple-watch:after {
-    content: '';
-    position: absolute;
-    top: 1.3em;
-    left: 0.87em;
-    display: block;
-    width: 0.5em;
-    height: 0;
-    transform: skewY(-45deg);
-    box-shadow: 0 0 0.375em 0.25em rgba(255,255,255,0.7);
-  }
-  .apple-watch:after {
-    left: auto;
-    top: 1.3em;
-    right: 0.87em;
-    transform: skewY(45deg);
-  }
-  .glass {
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    display: block;
-    width: 91%;
-    height: 91%;
-    overflow: hidden;
-    border-radius: 2.5625em;
-    box-shadow:
-      0 0 0 0.125em #333,
-      0 -1.25em 1em -0.75em rgba(255,255,255,0.5),
-      1.5em 0 1em -1em rgba(255,255,255,0.5),
-      0 1.25em 1em -0.75em rgba(255,255,255,0.5),
-      -1.5em 0 1em -1em rgba(255,255,255,0.5),
-      inset 3em 0 4em -3em rgba(255,255,255,0.6),
-      inset -0.25em -0.25em 0.75em rgba(255,255,255,0.4),
-      inset 0.5em 0 0.75em -0.5em rgba(255,255,255,0.6),
-      inset 0 0 0 2em #000;
-  }
-  .glass:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    display: block;
-    width: 88%;
-    height: 10%;
-    background: rgba(255,255,255,0.15);
-    border-radius: 10% / 50%;
-    box-shadow: inset 0 1.25em 1em 0.25em rgba(255,255,255,0.4);
-  }
-  
-  .display {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 91%;
-    height: 91%;
-    background-color: #000;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 60%;
-    border-radius: 2.56em;
-  }
+  position: relative;
+  width: 17.75em;
+  height: 20.5em;
+  margin: 2em auto;
+  color: #999;
+  background: currentColor;
+  background: linear-gradient(
+    -72deg,
+    #dedede,
+    #ffffff 16%,
+    #dedede 21%,
+    #ffffff 24%,
+    #454545 27%,
+    #dedede 36%,
+    #ffffff 45%,
+    #ffffff 60%,
+    #dedede 72%,
+    #ffffff 80%,
+    #dedede 84%,
+    #a1a1a1
+  );
+  border-radius: 3.25em;
+  transform: translateZ(0);
+  transition: all 500ms;
+}
+.apple-watch:before,
+.apple-watch:after {
+  content: "";
+  position: absolute;
+  top: 1.3em;
+  left: 0.87em;
+  display: block;
+  width: 0.5em;
+  height: 0;
+  transform: skewY(-45deg);
+  box-shadow: 0 0 0.375em 0.25em rgba(255, 255, 255, 0.7);
+}
+.apple-watch:after {
+  left: auto;
+  top: 1.3em;
+  right: 0.87em;
+  transform: skewY(45deg);
+}
+.glass {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 91%;
+  height: 91%;
+  overflow: hidden;
+  border-radius: 2.5625em;
+  box-shadow: 0 0 0 0.125em #333, 0 -1.25em 1em -0.75em rgba(255, 255, 255, 0.5),
+    1.5em 0 1em -1em rgba(255, 255, 255, 0.5),
+    0 1.25em 1em -0.75em rgba(255, 255, 255, 0.5),
+    -1.5em 0 1em -1em rgba(255, 255, 255, 0.5),
+    inset 3em 0 4em -3em rgba(255, 255, 255, 0.6),
+    inset -0.25em -0.25em 0.75em rgba(255, 255, 255, 0.4),
+    inset 0.5em 0 0.75em -0.5em rgba(255, 255, 255, 0.6), inset 0 0 0 2em #000;
+}
+.glass:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 88%;
+  height: 10%;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10% / 50%;
+  box-shadow: inset 0 1.25em 1em 0.25em rgba(255, 255, 255, 0.4);
+}
 
-  .clock-digital{
-    display: none;
-    position: relative;
-    top: 30%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    color: #fefefe;
-    font-size: 10rem;
-    font-weight: 900;
-    letter-spacing: 7px;
-    z-index: 9999;
-  }
+.display {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 91%;
+  height: 91%;
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 60%;
+  border-radius: 2.56em;
+}
 
-  .clock-digital.active {
-    display: block;
-  }
+.clock-digital {
+  display: none;
+  position: relative;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: #fff;
+  font-size: 10rem;
+  font-weight: 900;
+  letter-spacing: 7px;
+  z-index: 9999;
+}
 
-  .date-digital{
-    display: none;
-    position: relative;
-    top: 25%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    color: #fefefe;
-    font-size: 3rem;
-    font-weight: 900;
-    letter-spacing: -1px;
-    z-index: 9999;
-  }
-  .date-digital.active {
-    display: block;
-  }
+.clock-digital.active {
+  display: block;
+}
+
+.date-digital {
+  font-family: "Source Sans Pro", sans-serif;
+  display: none;
+  position: relative;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+  z-index: 9999;
+}
+.date-digital.active {
+  display: block;
+}
