@@ -122,3 +122,4 @@ function closeMenu() {
 
   //   clock.style.display = "block"
 }
+

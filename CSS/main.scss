@@ -263,6 +263,7 @@ body {
   background: rgba(255, 255, 255, 0.15);
   border-radius: 10% / 50%;
   box-shadow: inset 0 1.25em 1em 0.25em rgba(255, 255, 255, 0.4);
+ 
 }
 
 .display {
@@ -369,7 +370,7 @@ body {
   font-size: 8rem;
   font-weight: 900;
   letter-spacing: 7px;
-  z-index: 9999;
+  z-index: 9;
 }
 
 .clock-digital.active {
@@ -387,7 +388,7 @@ body {
   font-size: 2.5rem;
   font-weight: 900;
   letter-spacing: -1px;
-  z-index: 9999;
+  z-index: 9;
 }
 .date-digital.active {
   display: block;
@@ -429,8 +430,10 @@ body {
   left: 40%;
   transform: translate(-50%, -50%);
   width: 91%;
-  height: 91%;
+  height: 110%;
   object-fit: cover;
+  z-index: 100;
+
 }
 
 .bg-color {
@@ -453,6 +456,20 @@ body {
   background-position: 50% 60%;
   border-radius: 2.56em;
   z-index: 2;
+}
+
+
+.fade-in {
+  animation: fade-in 1s ease-in;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 // padding-inline-start: 20px;
