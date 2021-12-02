@@ -5,7 +5,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap");
-* {
+
+$bg-clr: steelblue;
+$bg-gradient: linear-gradient(
+  -72deg,
+  #dedede,
+  #ffffff 16%,
+  #dedede 21%,
+  #ffffff 24%,
+  #454545 27%,
+  #dedede 36%,
+  #ffffff 45%,
+  #ffffff 60%,
+  #dedede 72%,
+  #ffffff 80%,
+  #dedede 84%,
+  #a1a1a1
+);
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -13,6 +33,7 @@
 
 body {
   background: #1e1e1e;
+  background: #fefefe;
   background-size: cover;
   // font-family: 'Poppins', sans-serif;
   // font-family: 'Concert One', cursive;
@@ -188,22 +209,7 @@ body {
   height: 20.5em;
   margin: 2em auto;
   color: #999;
-  background: currentColor;
-  background: linear-gradient(
-    -72deg,
-    #dedede,
-    #ffffff 16%,
-    #dedede 21%,
-    #ffffff 24%,
-    #454545 27%,
-    #dedede 36%,
-    #ffffff 45%,
-    #ffffff 60%,
-    #dedede 72%,
-    #ffffff 80%,
-    #dedede 84%,
-    #a1a1a1
-  );
+  background: #000;
   border-radius: 3.25em;
   transform: translateZ(0);
   transition: all 500ms;
@@ -236,7 +242,7 @@ body {
   width: 91%;
   height: 91%;
   overflow: hidden;
-  border-radius: 2.5625em;
+  border-radius: 2.56em;
   box-shadow: 0 0 0 0.125em #333, 0 -1.25em 1em -0.75em rgba(255, 255, 255, 0.5),
     1.5em 0 1em -1em rgba(255, 255, 255, 0.5),
     0 1.25em 1em -0.75em rgba(255, 255, 255, 0.5),
@@ -273,14 +279,94 @@ body {
   border-radius: 2.56em;
 }
 
+.crown {
+  position: absolute;
+  z-index: 10;
+  top: 4.75em;
+  right: -0.8em;
+  width: 1.15em;
+  height: 3.5em;
+  overflow: hidden;
+  background: linear-gradient(
+    -72deg,
+    #dedede,
+    #ffffff 16%,
+    #dedede 21%,
+    #ffffff 24%,
+    #454545 27%,
+    #dedede 36%,
+    #ffffff 45%,
+    #ffffff 60%,
+    #dedede 72%,
+    #ffffff 80%,
+    #dedede 84%,
+    #a1a1a1
+  );
+  background-size: 50% 0.25em;
+  background-position: top right;
+  background-repeat: repeat-y;
+  border-left: 3px solid #777;
+  border-radius: 50% 25% 25% 50% / 50% 25% 25% 50%;
+  box-shadow: inset 0 0.15em 0.15em rgba(0, 0, 0, 0.5),
+    inset 5.15em 0 0.15em -5em rgba(0, 0, 0, 0.2),
+    inset 5.3em 0 0.15em -5em rgba(0, 0, 0, 0.2),
+    inset 0 0.4em 0.5em rgba(0, 0, 0, 0.8), inset 0 1em 0.5em rgba(0, 0, 0, 0.3),
+    inset 0 -1em 0.5em rgba(0, 0, 0, 0.3), inset 0 0 0 1em #ffffff80;
+}
+.crown:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: block;
+  width: 45%;
+  height: 0.125em;
+  color: rgba(0, 0, 0, 0.4);
+  background: #777;
+  box-shadow: 0 -0.25em, 0 -0.5em, 0 -0.75em rgba(0, 0, 0, 0.3),
+    0 -1em rgba(0, 0, 0, 0.3), 0 -1.1875em rgba(0, 0, 0, 0.3),
+    0 -1.375em rgba(0, 0, 0, 0.2), 0 -1.5625em rgba(0, 0, 0, 0.2),
+    0 -1.6875em rgba(0, 0, 0, 0.15), 0 0.25em, 0 0.5em,
+    0 0.75em rgba(0, 0, 0, 0.3), 0 1em rgba(0, 0, 0, 0.3),
+    0 1.1875em rgba(0, 0, 0, 0.3), 0 1.375em rgba(0, 0, 0, 0.2),
+    0 1.5625em rgba(0, 0, 0, 0.2), 0 1.6875em rgba(0, 0, 0, 0.15);
+  opacity: 0.5;
+}
+
+.button {
+  position: absolute;
+  z-index: 10;
+  top: 10.8125em;
+  right: -0.25em;
+  width: 0.25em;
+  height: 5.25em;
+  overflow: hidden;
+  background-size: 50% 0.25em;
+  background-position: top right;
+  background-repeat: repeat-y;
+  border-radius: 30% 25% 25% 30% / 50% 25% 25% 50%;
+  box-shadow: -0.0625em 0 0.125em #777,
+    inset -0.0625em 0 0.0625em rgba(0, 0, 0, 0.5),
+    inset 0 0.0625em rgba(0, 0, 0, 0.5),
+    inset 0 0.125em 0.15em rgba(222, 222, 222, 0.8),
+    inset 0 0.25em rgba(0, 0, 0, 0.5),
+    inset 0 0.5em 0.15em rgba(222, 222, 222, 0.8),
+    inset 0 -0.25em 0.125em rgba(0, 0, 0, 0.6),
+    inset 0 -0.5em 0.125em rgba(222, 222, 222, 0.8),
+    inset 0 -0.75em 0.125em rgba(0, 0, 0, 0.6),
+    inset 0 1.25em 0.5em -0.25em rgba(0, 0, 0, 0.8),
+    inset 0 0 0 0.25em rgba(222, 222, 222, 0.75);
+}
+
 .clock-digital {
   display: none;
   position: relative;
-  top: 30%;
+  top: 28%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   color: #fff;
-  font-size: 10rem;
+  font-size: 8rem;
   font-weight: 900;
   letter-spacing: 7px;
   z-index: 9999;
@@ -298,7 +384,7 @@ body {
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   color: #fff;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 900;
   letter-spacing: -1px;
   z-index: 9999;
@@ -306,3 +392,77 @@ body {
 .date-digital.active {
   display: block;
 }
+
+.picture {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  // border: 1px solid red;;
+  z-index: 90;
+
+  position: absolute;
+  top: 64.8%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  width: 86.5%;
+  height: 350px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 60%;
+  border-radius: 2.5em;
+}
+
+.picture.active,
+.bg-color.active,
+.start-img.active {
+  display: block;
+}
+.picture,
+.bg-color,
+.start-img {
+  display: none;
+}
+
+.start-img {
+  position: absolute;
+  top: 55%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  width: 91%;
+  height: 91%;
+  object-fit: cover;
+}
+
+.bg-color {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 83%;
+  height: 83%;
+  background-image: linear-gradient(
+    to top,
+    #ead9bf,
+    #cdd9c2,
+    #bad4cc,
+    #b6ccd1,
+    #bbc3cd
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 60%;
+  border-radius: 2.56em;
+  z-index: 2;
+}
+
+// padding-inline-start: 20px;
+// padding-block-start: 20px;
+// padding-block:
+//logical properties
+
+// pigeonfresh
+
+//wat wil je leren
+//wat heb je nodig
+//realistisch
+//hoeveel tijd

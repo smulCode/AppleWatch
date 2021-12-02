@@ -5,6 +5,9 @@ const buttonShowTime = document.querySelector(".btn-showTime");
 const clock = document.querySelector(".clock");
 const clockDigital = document.querySelector(".clock-digital");
 const dateDigital = document.querySelector(".date-digital");
+const picture = document.querySelector(".picture");
+const bgColor = document.querySelector(".bg-color");
+const startImg = document.querySelector(".start-img");
 
 const setDate = () => {
   const now = new Date();
@@ -102,6 +105,10 @@ function watchMenu() {
   clock.classList.toggle("active");
   clockDigital.classList.toggle("active");
   dateDigital.classList.toggle("active");
+  picture.classList.toggle("active");
+  bgColor.classList.toggle("active");
+  startImg.classList.toggle("active");
+
   //   clock.style.display = "none";
 }
 
@@ -109,6 +116,9 @@ function closeMenu() {
   clock.classList.remove("active");
   clockDigital.classList.remove("active");
   dateDigital.classList.remove("active");
+  picture.classList.remove("active");
+  bgColor.classList.remove("active");
+  startImg.classList.remove("active");
 
   //   clock.style.display = "block"
 }
