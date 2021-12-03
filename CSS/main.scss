@@ -63,13 +63,10 @@ body {
   z-index: 99;
   width: 32rem;
   height: 35rem;
-  //  border: 2px solid white;
   border-radius: 50%;
   position: absolute;
   padding: 1rem;
 
-  // box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef,
-  //   inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
 
   &::after {
     content: "";
@@ -116,18 +113,6 @@ body {
   width: 30%;
   left: 6rem;
 
-  // &:after{
-  //     content: '';
-  // position: absolute;
-  // background-color: white;
-  // z-index: 1;
-  // width: 50px;
-  // height: 10px;
-  // top: 50%;
-  // left: 30%;
-  // transform: translate(-50%, -50%);
-
-  // }
 }
 
 .min-hand {
@@ -406,7 +391,6 @@ body {
   position: relative;
   display: block;
   overflow: hidden;
-  // border: 1px solid red;;
   z-index: 90;
 
   position: absolute;
