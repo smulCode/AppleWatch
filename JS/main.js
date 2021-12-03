@@ -126,6 +126,7 @@ const changeWatchColorBlue = () => {
   appleWatch.classList.toggle("color-blue");
   firstDot.classList.toggle("color-blue");
   colorLabelBlue.classList.toggle("display-block");
+
 };
 const changeWatchColorRed = () => {
   appleWatch.classList.toggle("color-red");
