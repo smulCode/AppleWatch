@@ -507,28 +507,63 @@ body {
   background: rgba(0, 0, 0, 0.3);
   border: 2px solid #fefefe;
   cursor: pointer;
-  background-color: rgba(105, 90, 205, 0.822);
-
-
-  
-
-    
-
+  // background-color: rgba(105, 90, 205, 0.822);
 
 
   
 }
 
-.apple-watch.color-purple{
-  background-color: rgba(105, 90, 205, 0.822);
+.first-dot{
+  background-color:rgb(7, 23, 109);
 }
 
-.color-dot.color-purple{
+.second-dot{
+  background-color:crimson;
+}
+
+.third-dot{
+  background-color:black;
+}
+
+
+.apple-watch.color-blue{
+  background-color: rgb(7, 23, 109);
+}
+.apple-watch.color-red{
+  background-color: crimson;
+
+}
+.apple-watch.color-black{
+  background-color: #000;
+
+}
+
+.color-dot.color-blue,
+.color-dot.color-red,
+.color-dot.color-black
+{
+
+  &:focus{
   outline: 2px solid #111;
   outline-offset: 2px;
+  }
+  
+  }
+
+
+.color-label-blue,
+.color-label-red,
+.color-label-black
+{
+  display:none;
 }
-
-
+.color-label-blue.display-block,
+.color-label-red.display-block,
+.color-label-black.display-block
+{
+ 
+  display:block;
+}
 
 
 
