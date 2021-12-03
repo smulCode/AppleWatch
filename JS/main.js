@@ -123,18 +123,24 @@ const animatedFadeIn = () => {
 };
 
 const changeWatchColorBlue = () => {
-  appleWatch.classList.toggle("color-blue");
+  appleWatch.classList.add("color-blue");
+  appleWatch.classList.remove("color-red");
+  appleWatch.classList.remove("color-black");
   firstDot.classList.toggle("color-blue");
   colorLabelBlue.classList.toggle("display-block");
 
 };
 const changeWatchColorRed = () => {
-  appleWatch.classList.toggle("color-red");
+  appleWatch.classList.add("color-red");
+  appleWatch.classList.remove("color-blue");
+  appleWatch.classList.remove("color-black");
   secondDot.classList.toggle("color-red");
   colorLabelRed.classList.toggle("display-block");
 };
 const changeWatchColorBlack = () => {
-  appleWatch.classList.toggle("color-black");
+  appleWatch.classList.add("color-black");
+  appleWatch.classList.remove("color-red");
+  appleWatch.classList.remove("color-blue");
   thirdDot.classList.toggle("color-black");
   colorLabelBlack.classList.toggle("display-block");
 };
