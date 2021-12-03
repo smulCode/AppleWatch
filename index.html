@@ -15,8 +15,9 @@
   <body>
     <div class="main">
       <div class="apple-watch">
-        <div id="day-month" class="date-digital"></div>
-        <div id="digital-display" class="clock-digital"></div>
+        
+        <div id="day-month" class="date-digital fadeIn"></div>
+        <div id="digital-display" class="clock-digital fadeIn"></div>
         <div class="clock">
           <div class="clock-face">
             <div class="hand hour-hand"></div>
@@ -65,8 +66,22 @@
             class="start-img"
           />
         </div>
+        <button class="btn btn-showTime"></button>
       </div>
-      <button class="btn btn-showTime">show</button>
+
+      <div class="color-picker-container">
+        <div class="color-picker">
+          <div class="color-picker-headline"><h4>Find your Color</h4></div>
+          <ul class="color-picker-list">
+            <li class="color-picker-item"><button class="color-dot"></button></li>
+            <li class="color-picker-item"><button class="color-dot"></button></li>
+            <li class="color-picker-item"><button class="color-dot"></button></li>
+          </ul>
+        </div>
+      </div>
+
+
+    
     </div>
 
     <script src="./JS/main.js"></script>

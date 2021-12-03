@@ -358,6 +358,15 @@ body {
     inset 0 -0.75em 0.125em rgba(0, 0, 0, 0.6),
     inset 0 1.25em 0.5em -0.25em rgba(0, 0, 0, 0.8),
     inset 0 0 0 0.25em rgba(222, 222, 222, 0.75);
+    transition: all 1.5s linear forwards;
+  
+
+
+    &:hover {
+      box-shadow:none;
+       right: -0.15em;
+
+    }
 }
 
 .clock-digital {
@@ -457,6 +466,71 @@ body {
   border-radius: 2.56em;
   z-index: 2;
 }
+
+.btn{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: 9999;;
+  height: 91%;
+  width: 91%;
+  background: transparent;
+  border-radius: 2.56em;
+  background-position: 50% 60%;
+  border: none;
+  outline:none;
+  
+
+}
+
+.color-picker-list{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  // border: 1px solid red;
+  list-style-type: none;
+}
+
+// .color-picker-item{
+//   // border: 1px solid blue;
+//   // background-color: purple;
+
+
+
+// }
+
+.color-dot {
+  border: 0;
+  border-radius: 50%;
+  width: 3em;
+  height:3em;
+  background: rgba(0, 0, 0, 0.3);
+  border: 2px solid #fefefe;
+  cursor: pointer;
+  background-color: rgba(105, 90, 205, 0.822);
+
+
+  
+
+    
+
+
+
+  
+}
+
+.apple-watch.color-purple{
+  background-color: rgba(105, 90, 205, 0.822);
+}
+
+.color-dot.color-purple{
+  outline: 2px solid #111;
+  outline-offset: 2px;
+}
+
+
+
+
 
 
 .fade-in {

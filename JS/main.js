@@ -8,6 +8,9 @@ const dateDigital = document.querySelector(".date-digital");
 const picture = document.querySelector(".picture");
 const bgColor = document.querySelector(".bg-color");
 const startImg = document.querySelector(".start-img");
+const dotColor = document.querySelector(".color-dot");
+const appleWatch = document.querySelector(".apple-watch");
+// const fadeIn = document.querySelector(".fadeIn");
 
 const setDate = () => {
   const now = new Date();
@@ -99,27 +102,48 @@ const showDate = () => {
 
 showDate();
 
-buttonShowTime.addEventListener("click", watchMenu);
 
-function watchMenu() {
+const watchMenu = () => {
   clock.classList.toggle("active");
   clockDigital.classList.toggle("active");
   dateDigital.classList.toggle("active");
   picture.classList.toggle("active");
   bgColor.classList.toggle("active");
   startImg.classList.toggle("active");
-
+  
   //   clock.style.display = "none";
 }
 
-function closeMenu() {
-  clock.classList.remove("active");
-  clockDigital.classList.remove("active");
-  dateDigital.classList.remove("active");
-  picture.classList.remove("active");
-  bgColor.classList.remove("active");
-  startImg.classList.remove("active");
+// const closeMenu = () => {
+//   clock.classList.remove("active");
+//   clockDigital.classList.remove("active");
+//   dateDigital.classList.remove("active");
+//   picture.classList.remove("active");
+//   bgColor.classList.remove("active");
+//   startImg.classList.remove("active");
+  
+//   //   clock.style.display = "block"
+// }
 
-  //   clock.style.display = "block"
+const animatedFadeIn = () => {
+  clock.classList.toggle("fade-in");
+  clockDigital.classList.toggle("fade-in");
+  dateDigital.classList.toggle("fade-in");
+  picture.classList.toggle("fade-in");
+  bgColor.classList.toggle("fade-in");
+  startImg.classList.toggle("fade-in");
+ 
+
+} 
+
+const changeWatchColor = () => {
+  appleWatch.classList.toggle("color-purple");
+  dotColor.classList.toggle("color-purple");
+  dotColor.innerHTML;
 }
 
+
+
+buttonShowTime.addEventListener("click", watchMenu);
+buttonShowTime.addEventListener("click", animatedFadeIn);
+dotColor.addEventListener("click", changeWatchColor );
