@@ -17,23 +17,19 @@ const firstDot = document.querySelector(".first-dot");
 const secondDot = document.querySelector(".second-dot");
 const thirdDot = document.querySelector(".third-dot");
 
-
 const setDate = () => {
   const now = new Date();
   const seconds = now.getSeconds();
   let secondsDegrees = (seconds / 60) * 360 + 90;
   secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
-  // console.log(secondsDegrees);
 
   const minutes = now.getMinutes();
   let minutesDegrees = (minutes / 60) * 360 + 90;
   minHand.style.transform = `rotate(${minutesDegrees}deg)`;
-  //    console.log(minutes);
 
   const hours = now.getHours();
   let hoursDegrees = (hours / 12) * 360 + 90;
   hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
-  //    console.log(hours);
 
   if (seconds === 0) {
     secondsDegrees = 90;
@@ -108,7 +104,6 @@ const showDate = () => {
 
 showDate();
 
-
 const watchMenu = () => {
   clock.classList.toggle("active");
   clockDigital.classList.toggle("active");
@@ -116,10 +111,7 @@ const watchMenu = () => {
   picture.classList.toggle("active");
   bgColor.classList.toggle("active");
   startImg.classList.toggle("active");
-  
-  //   clock.style.display = "none";
-}
-
+};
 
 const animatedFadeIn = () => {
   clock.classList.toggle("fade-in");
@@ -128,33 +120,26 @@ const animatedFadeIn = () => {
   picture.classList.toggle("fade-in");
   bgColor.classList.toggle("fade-in");
   startImg.classList.toggle("fade-in");
- 
-
-} 
+};
 
 const changeWatchColorBlue = () => {
   appleWatch.classList.toggle("color-blue");
   firstDot.classList.toggle("color-blue");
   colorLabelBlue.classList.toggle("display-block");
-}
+};
 const changeWatchColorRed = () => {
   appleWatch.classList.toggle("color-red");
   secondDot.classList.toggle("color-red");
   colorLabelRed.classList.toggle("display-block");
-
-}
+};
 const changeWatchColorBlack = () => {
   appleWatch.classList.toggle("color-black");
   thirdDot.classList.toggle("color-black");
   colorLabelBlack.classList.toggle("display-block");
-
-}
-
-
-
+};
 
 buttonShowTime.addEventListener("click", watchMenu);
 buttonShowTime.addEventListener("click", animatedFadeIn);
-firstDot.addEventListener("click", changeWatchColorBlue );
-secondDot.addEventListener("click", changeWatchColorRed );
-thirdDot.addEventListener("click", changeWatchColorBlack );
+firstDot.addEventListener("click", changeWatchColorBlue);
+secondDot.addEventListener("click", changeWatchColorRed);
+thirdDot.addEventListener("click", changeWatchColorBlack);

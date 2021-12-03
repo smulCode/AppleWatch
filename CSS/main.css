@@ -402,6 +402,15 @@ body {
   outline: none;
 }
 
+.color-picker-container {
+  margin: 0 auto;
+  width: 42rem;
+}
+
+.color-picker-headline {
+  margin: 1em 0;
+}
+
 .color-picker-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -416,14 +425,15 @@ body {
   background: rgba(0, 0, 0, 0.3);
   border: 2px solid #fefefe;
   cursor: pointer;
+  border: 2px solid grey;
 }
 
 .first-dot {
-  background-color: #07176d;
+  background-color: steelblue;
 }
 
 .second-dot {
-  background-color: crimson;
+  background-color: #6b0f1a;
 }
 
 .third-dot {
@@ -431,15 +441,15 @@ body {
 }
 
 .apple-watch.color-blue {
-  background-color: #07176d;
+  background-color: steelblue;
 }
 
 .apple-watch.color-red {
-  background-color: crimson;
+  background-color: #6b0f1a;
 }
 
 .apple-watch.color-black {
-  background-color: #000;
+  background-color: black;
 }
 
 .color-dot.color-blue:focus,

@@ -6,7 +6,10 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap");
 
-$bg-clr: steelblue;
+$bg-clr-blue: steelblue;
+$bg-clr-red: #6b0f1a;
+$bg-clr-black: black;
+
 $bg-gradient: linear-gradient(
   -72deg,
   #dedede,
@@ -263,7 +266,6 @@ body {
   background: rgba(255, 255, 255, 0.15);
   border-radius: 10% / 50%;
   box-shadow: inset 0 1.25em 1em 0.25em rgba(255, 255, 255, 0.4);
- 
 }
 
 .display {
@@ -358,15 +360,12 @@ body {
     inset 0 -0.75em 0.125em rgba(0, 0, 0, 0.6),
     inset 0 1.25em 0.5em -0.25em rgba(0, 0, 0, 0.8),
     inset 0 0 0 0.25em rgba(222, 222, 222, 0.75);
-    transition: all 1.5s linear forwards;
-  
+  transition: all 1.5s linear forwards;
 
-
-    &:hover {
-      box-shadow:none;
-       right: -0.15em;
-
-    }
+  &:hover {
+    box-shadow: none;
+    right: -0.15em;
+  }
 }
 
 .clock-digital {
@@ -442,7 +441,6 @@ body {
   height: 110%;
   object-fit: cover;
   z-index: 100;
-
 }
 
 .bg-color {
@@ -467,106 +465,88 @@ body {
   z-index: 2;
 }
 
-.btn{
+.btn {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
-  z-index: 9999;;
+  z-index: 9999;
   height: 91%;
   width: 91%;
   background: transparent;
   border-radius: 2.56em;
   background-position: 50% 60%;
   border: none;
-  outline:none;
-  
-
+  outline: none;
 }
 
-.color-picker-list{
+.color-picker-container {
+  margin: 0 auto;
+  width: 42rem;
+}
+
+.color-picker-headline {
+  margin: 1em 0;
+}
+
+.color-picker-list {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
-  // border: 1px solid red;
+  grid-template-columns: repeat(3, 1fr);
   list-style-type: none;
 }
-
-// .color-picker-item{
-//   // border: 1px solid blue;
-//   // background-color: purple;
-
-
-
-// }
 
 .color-dot {
   border: 0;
   border-radius: 50%;
   width: 3em;
-  height:3em;
+  height: 3em;
   background: rgba(0, 0, 0, 0.3);
   border: 2px solid #fefefe;
   cursor: pointer;
-  // background-color: rgba(105, 90, 205, 0.822);
-
-
-  
+  border: 2px solid grey;
 }
 
-.first-dot{
-  background-color:rgb(7, 23, 109);
+.first-dot {
+  background-color: $bg-clr-blue;
 }
 
-.second-dot{
-  background-color:crimson;
+.second-dot {
+  background-color: $bg-clr-red;
 }
 
-.third-dot{
-  background-color:black;
+.third-dot {
+  background-color: $bg-clr-black;
 }
 
-
-.apple-watch.color-blue{
-  background-color: rgb(7, 23, 109);
+.apple-watch.color-blue {
+  background-color: $bg-clr-blue;
 }
-.apple-watch.color-red{
-  background-color: crimson;
-
+.apple-watch.color-red {
+  background-color: $bg-clr-red;
 }
-.apple-watch.color-black{
-  background-color: #000;
-
+.apple-watch.color-black {
+  background-color: $bg-clr-black;
 }
 
 .color-dot.color-blue,
 .color-dot.color-red,
-.color-dot.color-black
-{
-
-  &:focus{
-  outline: 2px solid #111;
-  outline-offset: 2px;
+.color-dot.color-black {
+  &:focus {
+    outline: 2px solid #111;
+    outline-offset: 2px;
   }
-  
-  }
-
+}
 
 .color-label-blue,
 .color-label-red,
-.color-label-black
-{
-  display:none;
+.color-label-black {
+  display: none;
 }
 .color-label-blue.display-block,
 .color-label-red.display-block,
-.color-label-black.display-block
-{
- 
-  display:block;
+.color-label-black.display-block {
+  display: block;
 }
-
-
-
 
 .fade-in {
   animation: fade-in 1s ease-in;
@@ -580,15 +560,3 @@ body {
     opacity: 1;
   }
 }
-
-// padding-inline-start: 20px;
-// padding-block-start: 20px;
-// padding-block:
-//logical properties
-
-// pigeonfresh
-
-//wat wil je leren
-//wat heb je nodig
-//realistisch
-//hoeveel tijd
