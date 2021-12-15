@@ -28,6 +28,7 @@ const setDate = () => {
   minHand.style.transform = `rotate(${minutesDegrees}deg)`;
 
   const hours = now.getHours();
+  console.log(hours);
   let hoursDegrees = (hours / 12) * 360 + 90;
   hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
 
@@ -36,6 +37,15 @@ const setDate = () => {
     secondHand.style.transition = `none`;
   } else {
     secondHand.style.transition = `all 0.05s`;
+  }
+
+  if (minutes >= 30 && minutes <= 60){
+    hoursDegrees = (hours / 12) * 360 + 100;
+    hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
+  }
+  else{
+    let hoursDegrees = (hours / 12) * 360 + 90;
+    hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
   }
 };
 

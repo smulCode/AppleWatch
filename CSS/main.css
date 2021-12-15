@@ -401,6 +401,9 @@ body {
   border: none;
   outline: none;
 }
+.btn:hover {
+  cursor: pointer;
+}
 
 .color-picker-container {
   margin: 0 auto;

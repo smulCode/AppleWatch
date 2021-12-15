@@ -462,6 +462,10 @@ body {
   background-position: 50% 60%;
   border: none;
   outline: none;
+
+  &:hover{
+    cursor: pointer;
+  }
 }
 
 .color-picker-container {
