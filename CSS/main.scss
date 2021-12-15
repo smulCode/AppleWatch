@@ -67,7 +67,6 @@ body {
   position: absolute;
   padding: 1rem;
 
-
   &::after {
     content: "";
     position: absolute;
@@ -112,7 +111,7 @@ body {
   transform-origin: 100%;
   width: 30%;
   left: 6rem;
-
+  background-color: #1e1e1e;
 }
 
 .min-hand {
@@ -463,7 +462,7 @@ body {
   border: none;
   outline: none;
 
-  &:hover{
+  &:hover {
     cursor: pointer;
   }
 }

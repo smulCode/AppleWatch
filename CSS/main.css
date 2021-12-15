@@ -83,6 +83,7 @@ body {
   transform-origin: 100%;
   width: 30%;
   left: 6rem;
+  background-color: #1e1e1e;
 }
 
 .min-hand {

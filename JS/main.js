@@ -39,11 +39,10 @@ const setDate = () => {
     secondHand.style.transition = `all 0.05s`;
   }
 
-  if (minutes >= 30 && minutes <= 60){
-    hoursDegrees = (hours / 12) * 360 + 100;
+  if (minutes >= 30 && minutes <= 60) {
+    hoursDegrees = (hours / 12) * 360 + 110;
     hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
-  }
-  else{
+  } else {
     let hoursDegrees = (hours / 12) * 360 + 90;
     hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
   }
@@ -138,7 +137,6 @@ const changeWatchColorBlue = () => {
   appleWatch.classList.remove("color-black");
   firstDot.classList.toggle("color-blue");
   colorLabelBlue.classList.toggle("display-block");
-
 };
 const changeWatchColorRed = () => {
   appleWatch.classList.add("color-red");
