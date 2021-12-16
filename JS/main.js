@@ -42,7 +42,11 @@ const setDate = () => {
   if (minutes >= 30 && minutes <= 60) {
     hoursDegrees = (hours / 12) * 360 + 110;
     hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
-  } else {
+  }else if(minutes >= 1 && minutes <= 30) {
+    hoursDegrees = (hours / 12) * 360 + 100;
+    hourHand.style.transform = `rotate(${hoursDegrees}deg)`;} 
+  
+  else {
     let hoursDegrees = (hours / 12) * 360 + 90;
     hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
   }
