@@ -250,6 +250,7 @@ body {
   background: rgba(255, 255, 255, 0.15);
   border-radius: 10% / 50%;
   box-shadow: inset 0 1.25em 1em 0.25em rgba(255, 255, 255, 0.4);
+ 
 }
 
 .display {
@@ -264,6 +265,7 @@ body {
   background-size: cover;
   background-position: 50% 60%;
   border-radius: 2.56em;
+  
 }
 
 .crown {
@@ -389,11 +391,10 @@ body {
 .picture {
   position: relative;
   display: block;
+  z-index: 10;
   overflow: hidden;
-  z-index: 90;
-
   position: absolute;
-  top: 67.8%;
+  top: 64.8%;
   left: 52%;
   transform: translate(-50%, -50%);
   width: 86.5%;
@@ -417,13 +418,15 @@ body {
 
 .start-img {
   position: absolute;
-  top: 55%;
+  top: 57%;
   left: 40%;
   transform: translate(-50%, -50%);
   width: 91%;
-  height: 110%;
+  height: 100%;
   object-fit: cover;
   z-index: 100;
+
+
 }
 
 .bg-color {

@@ -335,10 +335,10 @@ body {
 .picture {
   position: relative;
   display: block;
+  z-index: 10;
   overflow: hidden;
-  z-index: 90;
   position: absolute;
-  top: 67.8%;
+  top: 64.8%;
   left: 52%;
   transform: translate(-50%, -50%);
   width: 86.5%;
@@ -363,11 +363,11 @@ body {
 
 .start-img {
   position: absolute;
-  top: 55%;
+  top: 57%;
   left: 40%;
   transform: translate(-50%, -50%);
   width: 91%;
-  height: 110%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   z-index: 100;
